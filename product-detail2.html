@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Nutella-Cookies Pie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/product-detail.css">
+    <style>
+        .btn-wa {
+            background-color: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-wa:hover {
+            background-color: #20b955;
+        }
+
+        .variation {
+            margin-top: 30px;
+          }
+          
+          .variation h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+          }
+          
+          .flavor-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+          }
+          
+          .flavor-option {
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            background-color: #fff;
+            color: #333;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+          
+          .flavor-option:hover {
+            border-color: #ff8a00;
+            background-color: #fff6e5;
+            color: #ff8a00;
+          }
+          
+          .flavor-option.active {
+            background-color: #181817;
+            border-color: #2d2c2a;
+            color: #fff;
+          }
+          .main-image .imge{
+            width: 500px;
+            height: 500px;
+
+        }
+
+        .main-image{
+            width: 600;
+            height: 600px;
+        }
+        .product-card {
+            width:auto; /* atau atur sesuai kebutuhan */
+            height:auto ;
+            flex-direction: column;
+            border-radius: 10px;
+            text-align: center;
+        }
+          
+    </style>
+</head>
+<body>
+
+
+   
+
+
+    
+    <!-- Header -->
+    <header class="main-header">
+        <!-- Isi header sama seperti sebelumnya -->
+    </header>
+
+    <main class="product-detail-page">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / 
+                <a href="products.html">Menu</a> / 
+                <span>Cookies Nutella</span>
+            </div>
+            
+            <div class="product-detail-container">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="assets/img/nutella.jpg" alt="Cookies Nutella" id="main-product-image">
+                    </div>
+                   
+                </div>
+                
+                <div class="product-info">
+                    <h1 class="product-title">Cookies Nutella</h1>
+                    
+                    
+                    
+                    <div class="product-price">
+                        <span class="current-price">Rp 18.000</span>
+                        
+                    </div>
+                    
+                    <div class="product-description">
+                        <p>Cocok banget buat kamu yang suka camilan manis tapi nggak lebay dan pastinya estetik buat diposting di story 🤎</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Isian Nutella asli, lumer maksimal</li>
+                            <li><i class="fas fa-check"></i> Rasa manis & gurih seimbang</li>
+                            <li><i class="fas fa-check"></i> Kemasan kekinian & estetik</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-variations">
+                        <div class="variation">
+                            <h3>Varian Rasa:</h3>
+                            <div class="flavor-options">
+                                <button class="flavor-option active" data-flavor="Nutella">Nutella</button>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="variation">
+                            <h3>Jumlah:</h3>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus" type="button"><i class="fas fa-minus"></i></button>
+                                <input type="number" id="qty" value="1" min="1" max="12">
+                                <button class="quantity-btn plus" type="button"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+    
+                  
+    
+                    <div style="margin-top: 20px;">
+                        <button class="btn-wa" onclick="sendToWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        </button>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+            
+            <div class="product-tabs">
+                <ul class="tab-nav">
+                    <li class="active" data-tab="description">Deskripsi</li>
+                   
+                </ul>
+                
+                <div class="tab-content active" id="description">
+                    <h2>Deskripsi Produk</h2>
+                    Cookies Pie adalah perpaduan sempurna antara kerenyahan pie dan lembutnya isian cokelat serta Nutella yang meleleh di mulut.
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> Varian Chocolate & Nutella</li>
+                        <li><i class="fas fa-check-circle"></i> Tekstur Renyah di luar, lumer di dalam</li>
+                        <li><i class="fas fa-check-circle"></i> Rasa Gurih dan manis seimbang</li>
+                        <li><i class="fas fa-check-circle"></i> Cocok untuk semua usia, terutama anak muda</li>
+                    </ul>
+                
+                </div>
+                
+                
+                
+               
+            </div>
+            
+            <section class="related-products">
+                <h2 class="section-title">Anda Mungkin Juga Suka</h2>
+                <div class="products-grid">
+                   
+                <div class="product-card">
+                    <a href="product-detail1.html" class="product-link">
+                        <div class="product-thumb">
+                            <img src="assets/img/chocolate.jpg" alt="Cookies Chocolate">
+                            <div class="product-actions">
+                                <button class="quick-view" type="button"><i class="fas fa-eye"></i></button>
+                                <button class="add-to-wishlist" type="button"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Cookies Chocolate</h3>
+                            <div class="product-price"> 
+                                <span class="current-price">Rp 13.000</span>
+                               
+                            </div>
+                            
+                        </div>
+                    </a>
+                   
+                </div>
+               
+                </div>
+            </section>
+        </div>
+    </main>
+
+    
+
+    <!-- Footer -->
+    <footer class="main-footer" id="kontak-kami">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <!-- <span class="logo-icon"><i class="fas fa-store-alt"></i></span> -->
+                            <span class="logo-text">Cookies Pie</span>
+                        </a>
+                    </div>
+                    <p>Toko Jualan.</p>
+                    <div class="footer-social">
+                        <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+                        <a href="https://www.instagram.com/cookie_zpie?igsh=MTU3eDJ5Y2dtZjRhaA=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/6285274421751" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    
+                    </div>
+                </div>
+                
+                <div class="footer-col footer-links">
+                    <h3>Link Cepat</h3>
+                    <ul>
+                        <li><a href="index.html#home-kami">Home</a></li>
+                        <li><a href="index.html#tentang-kami">Tentang</a></li>
+                    <li><a href="index.html#produk-unggulan">Produk</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                
+                <div class="footer-col footer-contact">
+                    <h3>Kontak Kami</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jl. Srikandi, Delima, Kec. Tampan, Kota Pekanbaru, Riau</li>
+                        <li><i class="fab fa-whatsapp"></i>  0852-7442-1751</li>
+                        <li>
+    <a href="https://www.instagram.com/cookie_zpie?igsh=MTU3eDJ5Y2dtZjRhaA==" target="_blank" style="text-decoration: none; color: inherit;">
+      <i class="fab fa-instagram"></i>  @cookie_zpie
+    </a>
+    </li>
+                        <!-- <li><i class="fas fa-envelope"></i> info@namatoko.com</li> -->
+                        <li><i class="fas fa-clock"></i> Senin-Minggu, 08:00-21:00 WIB</li>
+                    </ul>
+                </div>
+            </div>
+            
+           
+        </div>
+    </footer>
+
+
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/product-detail.js"></script>
+
+
+    <script>
+        // Quantity adjustment
+        document.querySelector('.plus').addEventListener('click', () => {
+            let qty = document.getElementById('qty');
+            if (parseInt(qty.value) < 12) qty.value = parseInt(qty.value) + 0;
+        });
+    
+        document.querySelector('.minus').addEventListener('click', () => {
+            let qty = document.getElementById('qty');
+            if (parseInt(qty.value) > 1) qty.value = parseInt(qty.value) - 0;
+        });
+    
+        // Rasa selection
+        document.querySelectorAll('.flavor-option').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.flavor-option').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    
+        // WhatsApp Order Function
+        function sendToWhatsApp() {
+            const jumlah = document.getElementById('qty').value;
+            const rasa = document.querySelector('.flavor-option.active').getAttribute('data-flavor');
+            const hargaPerItem = 18000;
+            const total = jumlah * hargaPerItem;
+            const phone = "6285274421751"; // ← Ganti dengan nomor WA tujuan
+    
+            const message = `Halo! Saya ingin memesan Cookies Pie.\nVarian: ${rasa}\nJumlah: ${jumlah}\nTotal: Rp ${total.toLocaleString('id-ID')}`;
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+

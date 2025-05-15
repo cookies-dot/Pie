@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Cookies Pie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- <link rel="stylesheet" href="assets/css/products.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+</head>
+<!-- header.php -->
+<header class="main-header" >
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="logo" id="home-kami">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                <span class="logo-icon">
+                    <img src="assets/img/logocookies.jpg" alt="Cookies Pie Logo">
+                </span>
+                <span class="logo-text">Cookies Pie</span>
+            </a>
+        </div>
+
+        <!-- Hamburger button (mobile only) -->
+        <button class="mobile-menu-btn" id="menuToggle" style="font-size: 24px; background: none; border: none; cursor: pointer;">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Navigation menu -->
+        <nav class="main-nav" id="mobileNav">
+            <ul>
+            <li class="<?= ($page === 'home') ? 'active' : '' ?>"><a href="index.html">Home</a></li>
+                <li class="<?= ($page === 'products') ? 'active' : '' ?>"><a href="products.html">Produk</a></li>
+               
+            </ul>
+        </nav>
+    </div>
+
+    <style>
+
+        .products-page {
+            margin-bottom: 50px; /* Sesuaikan jarak */
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .product-card {
+        width: 300px; /* atau atur sesuai kebutuhan */
+        height:auto ;
+        flex-direction: column;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* atur jarak antar produk */
+}
+
+
+
+    .product-card .image{
+       width: 300px;
+       height: auto;
+    }
+
+        .logo-icon img {
+            height: 48px;
+            width: 48px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--accent-color, #f56a6a);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-text {
+            margin-left: 1px; /* Jarak antara logo dan teks */
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem; /* Ukuran teks disesuaikan dengan gambar */
+            font-weight: 700;
+            background: linear-gradient(45deg, #5D4037, #fff0f5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: inline-block;
+            line-height: 1;
+        }
+
+        .main-header {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .main-nav li.active a {
+            color: #007bff;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+                width: 100%;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .main-nav.show {
+                display: block;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+    </style>
+
+    <script>
+        const toggleBtn = document.getElementById('menuToggle');
+        const nav = document.getElementById('mobileNav');
+
+        toggleBtn.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+    </script>
+
+
+
+</header>
+  
+
+    <main class="products-page">
+        <div class="container">
+            <h1 class="page-title">Semua Produk</h1>
+            
+            <div class="products-grid">
+                
+                <div class="product-card">
+                    <a href="product-detail1.html" class="product-link">
+                        
+                        <div class="product-thumb">
+                            <img src="assets/img/chocolate.jpg" alt="Cookies Chocolate">
+                            <div class="product-actions">
+                                <button class="quick-view" type="button"><i class="fas fa-eye"></i></button>
+                                <button class="add-to-wishlist" type="button"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Cookies Chocolate</h3>
+                            <div class="product-price">
+                                <span class="current-price">Rp 13.000</span>
+                                
+                            </div>
+                            
+                        </div>
+                    </a>
+                   
+                </div>
+                
+                
+                <div class="product-card">
+                    <a href="product-detail2.html" class="product-link">
+                        <div class="product-thumb">
+                            <img src="assets/img/nutella.jpg" alt="Cookies Nutella">
+                            <div class="product-actions">
+                                <button class="quick-view" type="button"><i class="fas fa-eye"></i></button>
+                                <button class="add-to-wishlist" type="button"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Cookies Nutella</h3>
+                            <div class="product-price">
+                                <span class="current-price">Rp 18.000</span>
+                                
+                            </div>
+                            
+                        </div>
+                    </a>
+                   
+                </div>
+
+                
+                
+               
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer" id="kontak-kami">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <!-- <span class="logo-icon"><i class="fas fa-store-alt"></i></span> -->
+                            <span class="logo-text">Cookies Pie</span>
+                        </a>
+                    </div>
+                    <p>Toko Jualan.</p>
+                    <div class="footer-social">
+                        <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+                        <a href="https://www.instagram.com/cookie_zpie?igsh=MTU3eDJ5Y2dtZjRhaA=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/6285274421751" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    
+                    </div>
+                </div>
+                
+                <div class="footer-col footer-links">
+                    <h3>Link Cepat</h3>
+                    <ul>
+                    <li><a href="index.html#home-kami">Home</a></li>
+                    <li><a href="index.html#tentang-kami">Tentang</a></li>
+                <li><a href="index.html#produk-unggulan">Produk</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                
+                <div class="footer-col footer-contact">
+                    <h3>Kontak Kami</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jl.Srikandi No 1, Kota Pekanbaru, Riau</li>
+                        <li><i class="fab fa-whatsapp"></i> 0852-7442-1751</li>
+                        <li>
+    <a href="https://www.instagram.com/cookie_zpie?igsh=MTU3eDJ5Y2dtZjRhaA==" target="_blank" style="text-decoration: none; color: inherit;">
+      <i class="fab fa-instagram"></i> @cookie_zpie
+    </a>
+    </li>
+                        <!-- <li><i class="fas fa-envelope"></i> info@namatoko.com</li> -->
+                        <li><i class="fas fa-clock"></i> Kamis-sabtu</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+        </div>
+    </footer>
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/products.js"></script>
+</body>
+
+</html>
